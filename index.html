@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alyssa Versoza - Portfolio</title>
+  <meta name="description" content="Aly: Digital Marketing Portfolio" />
+
+  <!-- Fonts: Inter (Helvetica-style sans) + Playfair Display Italic (The Seasons-style serif), both open-licensed -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Playfair+Display:ital,wght@1,400;1,700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Apply saved theme before paint to avoid a flash of the wrong theme -->
+  <script>
+    try {
+      const saved = localStorage.getItem('theme');
+      if (saved) document.documentElement.dataset.theme = saved;
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============ HEADER / NAV ============ -->
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a href="#home" class="logo" aria-label="Aly, home">Aly<span aria-hidden="true">✦</span></a>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#creatives" class="nav-link">Creatives</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li>
+          <button class="theme-toggle" aria-label="Toggle dark mode">
+            <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+            <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- ============ HOME / ABOUT ============ -->
+    <section id="home" class="section hero bg-gradient-1">
+      <div class="container hero-grid">
+        <div class="hero-text reveal">
+          <p class="eyebrow">Portfolio</p>
+          <h1><span class="script">Alyssa</span> Versoza</h1>
+          <p class="tagline">
+            <span class="typed" aria-live="polite"></span>
+          </p>
+          <p class="headline">Curious and data-driven strategist</p>
+          <p class="lead">
+            Helping businesses turn data into actionable strategies to achieve goals.
+          </p>
+          <div class="hero-actions">
+            <!-- Opens the résumé viewer (js/main.js). Without JavaScript it just opens the PDF. -->
+            <a href="Assets/VERSOZA,%20Alyssa%20-%20Resume.pdf" class="btn btn-primary"
+               data-pdf data-pdf-title="My résumé" data-pdf-name="VERSOZA-Alyssa-Resume.pdf"
+               aria-haspopup="dialog" target="_blank" rel="noopener">Peek at my résumé ✦</a>
+            <a href="#contact" class="btn btn-ghost">Get in touch</a>
+          </div>
+        </div>
+
+        <!-- Profile icon (right column): a fixed square frame clipped to a circle, so the photo can never stretch.
+             The SVGs around it are decorative shapes from the design references. -->
+        <div class="hero-photo reveal">
+          <div class="profile-wrap">
+            <div class="profile-icon">
+              <img src="Assets/Icon_Cropped.png" width="2000" height="2000" alt="Portrait of Alyssa Versoza" />
+            </div>
+            <!-- Large yellow sparkle, top right -->
+            <svg class="deco deco-sparkle-lg" viewBox="-14 -14 28 28" aria-hidden="true" focusable="false">
+              <path d="M0-14C1-4 4-1 14 0C4 1 1 4 0 14C-1 4-4 1-14 0C-4-1-1-4 0-14Z" fill="#fbc244"/>
+            </svg>
+            <!-- Purple flower, top left -->
+            <svg class="deco deco-flower" viewBox="-24 -24 48 48" aria-hidden="true" focusable="false">
+              <g fill="#cb6ce6">
+                <ellipse rx="5" ry="11" cy="-12"/>
+                <ellipse rx="5" ry="11" cy="-12" transform="rotate(45)"/>
+                <ellipse rx="5" ry="11" cy="-12" transform="rotate(90)"/>
+                <ellipse rx="5" ry="11" cy="-12" transform="rotate(135)"/>
+                <ellipse rx="5" ry="11" cy="-12" transform="rotate(180)"/>
+                <ellipse rx="5" ry="11" cy="-12" transform="rotate(225)"/>
+                <ellipse rx="5" ry="11" cy="-12" transform="rotate(270)"/>
+                <ellipse rx="5" ry="11" cy="-12" transform="rotate(315)"/>
+              </g>
+            </svg>
+            <!-- Leaf block (two rounded corners), bottom left -->
+            <svg class="deco deco-leaf" viewBox="0 0 40 40" aria-hidden="true" focusable="false">
+              <path d="M0 0H20A20 20 0 0 1 40 20V40H20A20 20 0 0 1 0 20Z" fill="currentColor"/>
+            </svg>
+            <!-- Small purple sparkle, bottom right -->
+            <svg class="deco deco-sparkle-sm" viewBox="-14 -14 28 28" aria-hidden="true" focusable="false">
+              <path d="M0-14C1-4 4-1 14 0C4 1 1 4 0 14C-1 4-4 1-14 0C-4-1-1-4 0-14Z" fill="#cb6ce6"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <div class="container about reveal">
+        <div class="about-grid">
+          <div>
+            <h2 class="section-title">About <span class="script">me</span></h2>
+            <p>
+              I am Aly, a curious digital marketing and social media specialist experienced in
+              social media management, content creation, lead generation, and paid campaigns.
+            </p>
+          </div>
+          <div>
+            <h3 class="mini-title">At a glance</h3>
+            <ul class="stats">
+              <li class="stat"><strong>200%</strong><span>Instagram reach growth</span></li>
+              <li class="stat"><strong>82%</strong><span>cut in cost per lead</span></li>
+              <li class="stat"><strong>60+</strong><span>creatives produced (reels, posters, carousels)</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FEATURED PROJECTS (folders) ============
+         Each folder opens a case-study pop-up (the <dialog> with the matching id,
+         near the bottom of this file). The thumbnails are hand-drawn SVGs. -->
+    <section id="projects" class="section">
+      <div class="container">
+        <h2 class="section-title section-title--spaced reveal">Featured <span class="script">projects</span></h2>
+
+        <div class="folder-grid">
+          <!-- ---------- Folder 01 ---------- -->
+          <article class="folder reveal" data-case="case-instagram" style="--folder: #cb6ce6; --folder-ink: #000">
+            <span class="folder-tab">Project 01</span>
+            <div class="folder-back">
+              <div class="folder-paper">
+                <svg viewBox="0 0 320 200" aria-hidden="true" focusable="false">
+                  <rect width="320" height="200" fill="#cb6ce6"/>
+                  <g transform="translate(288 32)" fill="#fbc244">
+                    <ellipse rx="5" ry="12" cy="-11"/>
+                    <ellipse rx="5" ry="12" cy="-11" transform="rotate(45)"/>
+                    <ellipse rx="5" ry="12" cy="-11" transform="rotate(90)"/>
+                    <ellipse rx="5" ry="12" cy="-11" transform="rotate(135)"/>
+                    <ellipse rx="5" ry="12" cy="-11" transform="rotate(180)"/>
+                    <ellipse rx="5" ry="12" cy="-11" transform="rotate(225)"/>
+                    <ellipse rx="5" ry="12" cy="-11" transform="rotate(270)"/>
+                    <ellipse rx="5" ry="12" cy="-11" transform="rotate(315)"/>
+                    <circle r="3" fill="#000"/>
+                  </g>
+                  <g stroke="#000" stroke-opacity=".18">
+                    <line x1="24" y1="100" x2="296" y2="100"/>
+                    <line x1="24" y1="129" x2="296" y2="129"/>
+                  </g>
+                  <path d="M24 158V144L70 140L116 146L162 132L208 114L254 90L290 78V158Z" fill="#fff" fill-opacity=".4"/>
+                  <polyline points="24,144 70,140 116,146 162,132 208,114 254,90 290,78" fill="none" stroke="#000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                  <line x1="24" y1="158" x2="296" y2="158" stroke="#000" stroke-width="2"/>
+                  <circle cx="290" cy="78" r="6" fill="#fbc244" stroke="#000" stroke-width="2"/>
+                  <text x="24" y="58" font-family="'Playfair Display', Georgia, serif" font-style="italic" font-weight="700" font-size="42" fill="#000">+260%</text>
+                  <text x="26" y="78" font-family="Inter, Arial, sans-serif" font-weight="700" font-size="10" letter-spacing="2" fill="#000">VIEWS IN OCTOBER</text>
+                </svg>
+              </div>
+            </div>
+            <div class="folder-front">
+              <p class="folder-kicker">Social Media Strategy</p>
+              <h3>Instagram Social Media Growth</h3>
+              <p>A Q4 strategy that made October the strongest month in 90 days.</p>
+              <ul class="folder-metrics">
+                <li><strong>+260%</strong> views</li>
+                <li><strong>~6×</strong> reach</li>
+                <li><strong>+170%</strong> interactions</li>
+              </ul>
+              <button type="button" class="folder-open" aria-haspopup="dialog">
+                <span class="sr-only">Open folder: Instagram Social Media Growth</span><span aria-hidden="true">→</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- ---------- Folder 02 ---------- -->
+          <article class="folder reveal" data-case="case-meta" style="--folder: #fbc244; --folder-ink: #000">
+            <span class="folder-tab">Project 02</span>
+            <div class="folder-back">
+              <div class="folder-paper">
+                <svg viewBox="0 0 320 200" aria-hidden="true" focusable="false">
+                  <rect width="320" height="200" fill="#fbc244"/>
+                  <g transform="translate(304 14)" fill="#000" opacity=".1">
+                    <rect x="-4" y="-44" width="8" height="40" rx="2"/>
+                    <rect x="-4" y="-44" width="8" height="40" rx="2" transform="rotate(30)"/>
+                    <rect x="-4" y="-44" width="8" height="40" rx="2" transform="rotate(60)"/>
+                    <rect x="-4" y="-44" width="8" height="40" rx="2" transform="rotate(90)"/>
+                    <rect x="-4" y="-44" width="8" height="40" rx="2" transform="rotate(120)"/>
+                    <rect x="-4" y="-44" width="8" height="40" rx="2" transform="rotate(150)"/>
+                    <rect x="-4" y="-44" width="8" height="40" rx="2" transform="rotate(180)"/>
+                    <rect x="-4" y="-44" width="8" height="40" rx="2" transform="rotate(210)"/>
+                    <rect x="-4" y="-44" width="8" height="40" rx="2" transform="rotate(240)"/>
+                  </g>
+                  <rect x="36" y="40" width="60" height="120" rx="4" fill="#000"/>
+                  <text x="66" y="60" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-weight="700" font-size="12" fill="#fbc244">$71.41</text>
+                  <rect x="112" y="139" width="60" height="21" rx="4" fill="#cb6ce6" stroke="#000" stroke-width="2"/>
+                  <text x="142" y="154" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-weight="700" font-size="11" fill="#000">$12.57</text>
+                  <line x1="24" y1="126" x2="184" y2="126" stroke="#000" stroke-width="1.5" stroke-dasharray="5 4"/>
+                  <text x="176" y="119" text-anchor="end" font-family="Inter, Arial, sans-serif" font-weight="700" font-size="9" letter-spacing="1" fill="#000">TARGET $20</text>
+                  <line x1="24" y1="160" x2="188" y2="160" stroke="#000" stroke-width="2"/>
+                  <text x="204" y="92" font-family="'Playfair Display', Georgia, serif" font-style="italic" font-weight="700" font-size="44" fill="#000">−82%</text>
+                  <text x="206" y="112" font-family="Inter, Arial, sans-serif" font-weight="700" font-size="10" letter-spacing="2" fill="#000">COST PER LEAD</text>
+                  <text x="206" y="134" font-family="Inter, Arial, sans-serif" font-weight="700" font-size="11" fill="#000">CTR 1.82% → 2.36%</text>
+                </svg>
+              </div>
+            </div>
+            <div class="folder-front">
+              <p class="folder-kicker">Meta Ads</p>
+              <h3>Meta Ad Campaigns</h3>
+              <p>Relaunching a recruitment campaign to attract qualified tradespeople.</p>
+              <ul class="folder-metrics">
+                <li><strong>−82%</strong> cost per lead</li>
+                <li><strong>2.36%</strong> CTR</li>
+                <li><strong>2</strong> sample decks</li>
+              </ul>
+              <button type="button" class="folder-open" aria-haspopup="dialog">
+                <span class="sr-only">Open folder: Meta Ad Campaigns</span><span aria-hidden="true">→</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- ---------- Folder 03 ---------- -->
+          <article class="folder reveal" data-case="case-giveaway" style="--folder: #000; --folder-ink: #fbc244">
+            <span class="folder-tab">Project 03</span>
+            <div class="folder-back">
+              <div class="folder-paper">
+                <svg viewBox="0 0 320 200" aria-hidden="true" focusable="false">
+                  <rect width="320" height="200" fill="#000"/>
+                  <g fill="#fbc244">
+                    <path transform="translate(152 40)" d="M0-14C1-4 4-1 14 0C4 1 1 4 0 14C-1 4-4 1-14 0C-4-1-1-4 0-14Z"/>
+                    <path transform="translate(28 44) scale(.6)" d="M0-14C1-4 4-1 14 0C4 1 1 4 0 14C-1 4-4 1-14 0C-4-1-1-4 0-14Z"/>
+                    <path transform="translate(150 150) scale(.5)" d="M0-14C1-4 4-1 14 0C4 1 1 4 0 14C-1 4-4 1-14 0C-4-1-1-4 0-14Z"/>
+                  </g>
+                  <rect x="92" y="22" width="6" height="30" rx="3" fill="#fbc244" transform="rotate(12 95 46)"/>
+                  <path d="M114 74H128Q140 74 140 86V114Q140 126 128 126H110" fill="none" stroke="#cb6ce6" stroke-width="9" stroke-linecap="round"/>
+                  <path d="M52 62H116L108 112L102 166H66L60 112Z" fill="#cb6ce6"/>
+                  <path d="M54 76H114L112 90H56Z" fill="#fff" opacity=".3"/>
+                  <rect x="50" y="46" width="68" height="16" rx="4" fill="#fff"/>
+                  <text x="176" y="104" font-family="'Playfair Display', Georgia, serif" font-style="italic" font-weight="700" font-size="70" fill="#fbc244">43</text>
+                  <text x="178" y="126" font-family="Inter, Arial, sans-serif" font-weight="700" font-size="9.5" letter-spacing="1.5" fill="#fff">PARTNER RESPONSES</text>
+                  <rect x="178" y="138" width="108" height="22" rx="11" fill="#cb6ce6"/>
+                  <text x="232" y="153" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-weight="700" font-size="9" letter-spacing="1" fill="#000">BUILT IN 1 DAY</text>
+                </svg>
+              </div>
+            </div>
+            <div class="folder-front">
+              <p class="folder-kicker">Campaign</p>
+              <h3>One-Week Giveaway Campaign, Built in a Day</h3>
+              <p>A partner giveaway, from social post to email to lead intake, ready in one day.</p>
+              <ul class="folder-metrics">
+                <li><strong>43</strong> partner responses</li>
+                <li><strong>1 day</strong> to build</li>
+              </ul>
+              <button type="button" class="folder-open" aria-haspopup="dialog">
+                <span class="sr-only">Open folder: One-Week Giveaway Campaign</span><span aria-hidden="true">→</span>
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CREATIVES ============ -->
+    <section id="creatives" class="section bg-gradient-2">
+      <div class="container">
+        <h2 class="section-title section-title--spaced reveal">My <span class="script">creatives</span></h2>
+
+        <!--
+          Carousels: scroll, swipe, or use the arrow buttons. The item in the
+          middle pops up (js/main.js, section 7). To add an item, copy an <li>.
+        -->
+        <h3 class="carousel-title reveal">Sample Graphic Design</h3>
+        <div class="carousel carousel--images reveal" data-carousel>
+          <button type="button" class="carousel-btn carousel-prev" aria-label="Previous design">←</button>
+          <ul class="carousel-track" tabindex="0" aria-label="Graphic design samples">
+            <li class="carousel-item"><img src="Assets/Graphic%20Design/FST%20TOUR_MAIN%20PUB.png" loading="lazy" width="1000" height="1000" alt="Freshman Tour Main Asset" /></li>
+            <li class="carousel-item"><img src="Assets/Graphic%20Design/Independence%20Day%20Pub.png" loading="lazy" width="1000" height="1000" alt="Independence day poster" /></li>
+            <li class="carousel-item"><img src="Assets/Graphic%20Design/main%20pub%20draft.png" loading="lazy" width="1000" height="1000" alt="Martial law commemoration poster" /></li>
+            <li class="carousel-item"><img src="Assets/Graphic%20Design/NATIONAL%20HEROES%20DAY.png" loading="lazy" width="1000" height="1000" alt="National heroes day poster" /></li>
+            <li class="carousel-item" style="--ratio: 4 / 5"><img src="Assets/Graphic%20Design/VERSOZA_PORTFOLIO.png" loading="lazy" width="1213" height="1516" alt="Applicants' Orientation poster" /></li>
+            <li class="carousel-item"><img src="Assets/Graphic%20Design/WEEK%201%20MAIN%20PUB.png" loading="lazy" width="1000" height="1000" alt="Women's Month Cover Page" /></li>
+          </ul>
+          <button type="button" class="carousel-btn carousel-next" aria-label="Next design">→</button>
+        </div>
+
+        <!-- The centered video plays muted on loop; the others pause. -->
+        <h3 class="carousel-title reveal">Video Edit Snippets</h3>
+        <div class="carousel carousel--videos reveal" data-carousel>
+          <button type="button" class="carousel-btn carousel-prev" aria-label="Previous video">←</button>
+          <ul class="carousel-track" tabindex="0" aria-label="Video edit snippets">
+            <li class="carousel-item" style="--ratio: 9 / 16">
+              <video src="Assets/Sample%20Videos/Sample%20Video%202.mp4" muted loop playsinline preload="metadata" aria-label="Video edit snippet 1"></video>
+            </li>
+            <li class="carousel-item" style="--ratio: 16 / 9">
+              <video src="Assets/Sample%20Videos/Sample%20Video.mp4" muted loop playsinline preload="metadata" aria-label="Video edit snippet 2"></video>
+            </li>
+            <li class="carousel-item" style="--ratio: 9 / 16">
+              <video src="Assets/Sample%20Videos/Shark%20Revised.mp4" muted loop playsinline preload="metadata" aria-label="Video edit snippet 3"></video>
+            </li>
+          </ul>
+          <button type="button" class="carousel-btn carousel-next" aria-label="Next video">→</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section id="experience" class="section">
+      <div class="container">
+        <h2 class="section-title reveal">My <span class="script">experience</span></h2>
+        <p class="section-sub reveal">Where I've worked and what I've led.</p>
+
+        <ol class="timeline">
+          <li class="timeline-item reveal">
+            <span class="timeline-date">2025 — Present</span>
+            <h3>Marketing &amp; Design Expert <span>@ Shark Group</span></h3>
+            <ul>
+              <li>I lead social media, content creation, graphic design, and Meta Ads.</li>
+              <li>I turn data into strategies and proposals for leadership.</li>
+              <li>I also support the team with administrative work, including staff onboarding, org chart updates, and supplier orders.</li>
+            </ul>
+          </li>
+          <li class="timeline-item reveal">
+            <span class="timeline-date">2024 — 2025</span>
+            <h3>Creative Manager <span>@ School of Library and Information Studies Student Council</span></h3>
+            <ul>
+              <li>Led creative direction for events and campaigns, guiding a team of 7 in producing 160+ digital materials, including logos, banners, videos, infographics, and merchandise.</li>
+            </ul>
+          </li>
+        </ol>
+
+        <h3 class="subsection-title reveal">You can <span class="script">trust me</span> with</h3>
+        <!-- Skill cards: title first; the description slides open on hover or keyboard focus.
+             On touch screens (no hover) the descriptions are always shown. -->
+        <div class="card-grid">
+          <article class="info-card skill-card reveal" tabindex="0">
+            <h4>Social media management <span class="skill-hint" aria-hidden="true">+</span></h4>
+            <div class="skill-desc"><p>I plan, create, and publish content across platforms and keep communities engaged by replying within the hour.</p></div>
+          </article>
+          <article class="info-card skill-card reveal" tabindex="0">
+            <h4>Content strategy <span class="skill-hint" aria-hidden="true">+</span></h4>
+            <div class="skill-desc"><p>I use performance data to decide what to post, when, and why, building content calendars around formats that drive reach and follower growth.</p></div>
+          </article>
+          <article class="info-card skill-card reveal" tabindex="0">
+            <h4>Meta Ads campaigns <span class="skill-hint" aria-hidden="true">+</span></h4>
+            <div class="skill-desc"><p>I plan, launch, and optimize campaigns, from proposal and creatives to targeting, lead capture, and reporting.</p></div>
+          </article>
+        </div>
+
+        <h3 class="subsection-title reveal">My <span class="script">tools</span></h3>
+        <div class="tool-groups">
+          <div class="reveal">
+            <h4 class="mini-title">Digital marketing</h4>
+            <ul class="skills">
+              <li>Meta Ads Business Suite</li><li>Mailchimp</li><li>Facebook</li><li>Instagram</li>
+              <li>LinkedIn</li><li>TikTok</li><li>Notion</li>
+            </ul>
+          </div>
+          <div class="reveal">
+            <h4 class="mini-title">Design</h4>
+            <ul class="skills">
+              <li>Canva</li><li>CapCut</li><li>Photoshop</li><li>Premiere Pro</li>
+            </ul>
+          </div>
+          <div class="reveal">
+            <h4 class="mini-title">AI &amp; automations</h4>
+            <ul class="skills">
+              <li>Claude</li><li>Higgsfield AI</li><li>Make</li><li>Botcake</li><li>Apify</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ STRATEGY + CONTACT ============ -->
+    <section id="contact" class="section bg-gradient-1">
+      <div class="container">
+        <h2 class="section-title text-center reveal">My strategy? Remember <span class="script highlight">ALY</span>.</h2>
+        <p class="section-tagline text-center reveal">Your ally in marketing.</p>
+
+        <ol class="aly-grid">
+          <li class="aly-card reveal">
+            <span class="aly-letter" style="--letter-bg: #cb6ce6; --letter-fg: #000" aria-hidden="true">A</span>
+            <h3>Audit</h3>
+            <p>Defining a business's vision means knowing its foundation and goals to win the strategy.</p>
+          </li>
+          <li class="aly-card reveal">
+            <span class="aly-letter" style="--letter-bg: #fbc244; --letter-fg: #000" aria-hidden="true">L</span>
+            <h3>Level up</h3>
+            <p>Turning challenges into opportunities and building feasible actions for improvement.</p>
+          </li>
+          <li class="aly-card reveal">
+            <span class="aly-letter" style="--letter-bg: #000; --letter-fg: #fbc244" aria-hidden="true">Y</span>
+            <h3>Yield wins</h3>
+            <p>Winning is not only about getting a job done, but also about making an impact and achieving long-term growth.</p>
+          </li>
+        </ol>
+
+        <div class="contact-block text-center reveal">
+          <h2 class="section-title">Let's build your <span class="script">presence</span>, one step at a time.</h2>
+          <p class="contact-cta">Work with me!</p>
+          <!-- Shared gradient for the icon lines (purple → pink → yellow) -->
+          <svg width="0" height="0" style="position: absolute" aria-hidden="true" focusable="false">
+            <defs>
+              <linearGradient id="icon-gradient" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#cb6ce6"/>
+                <stop offset=".55" stop-color="#f97cbc"/>
+                <stop offset="1" stop-color="#fbc244"/>
+              </linearGradient>
+            </defs>
+          </svg>
+
+          <!-- Icon-only links. aria-label is what screen readers announce; title shows on hover. -->
+          <ul class="contact-links">
+            <li>
+              <a class="contact-link" href="mailto:alversoza0503@gmail.com"
+                 aria-label="Email Alyssa at alversoza0503@gmail.com" title="Email: alversoza0503@gmail.com">
+                <svg viewBox="0 0 24 24" fill="none" stroke="url(#icon-gradient)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+              </a>
+            </li>
+            <li>
+              <a class="contact-link" href="https://www.linkedin.com/in/alyssa-louise-versoza-38535a377" target="_blank" rel="noopener"
+                 aria-label="Alyssa's LinkedIn profile (opens in a new tab)" title="LinkedIn">
+                <svg viewBox="0 0 24 24" fill="url(#icon-gradient)" aria-hidden="true" focusable="false"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Alyssa Louise F. Versoza</p>
+      <a href="#home" class="back-to-top" aria-label="Back to top">↑</a>
+    </div>
+  </footer>
+
+  <!-- =========================================================
+       CASE STUDY POP-UPS (opened by the project folders)
+       ========================================================= -->
+
+  <!-- ---------- Case 01: Instagram Social Media Growth ---------- -->
+  <dialog class="modal modal--case" id="case-instagram" aria-labelledby="case-instagram-title" style="--folder: #cb6ce6; --folder-ink: #000">
+    <div class="modal-header">
+      <div>
+        <p class="case-kicker">Project 01 · Social Media Strategy</p>
+        <h2 id="case-instagram-title">Instagram Social Media Growth</h2>
+      </div>
+      <button type="button" class="icon-btn" data-close-modal aria-label="Close case study">✕</button>
+    </div>
+    <div class="modal-scroll">
+      <div class="dash">
+        <section class="panel">
+          <h3 class="panel-label">Objective</h3>
+          <ul class="goal-list">
+            <li>Grow Shark Group's Instagram following, leadership's priority platform, alongside other channels</li>
+            <li>Increase views and engagement on every post</li>
+          </ul>
+        </section>
+
+        <section class="panel">
+          <h3 class="panel-label">Challenge</h3>
+          <div class="kpi-grid">
+            <div class="kpi kpi--before">
+              <span class="kpi-label">Net new followers / month</span>
+              <strong class="kpi-value">30–50</strong>
+              <span class="kpi-note">Slow and inconsistent</span>
+            </div>
+            <div class="kpi kpi--before">
+              <span class="kpi-label">Views per post</span>
+              <strong class="kpi-value">500–1,000</strong>
+            </div>
+            <div class="kpi kpi--before">
+              <span class="kpi-label">Interactions per post</span>
+              <strong class="kpi-value">20–50</strong>
+            </div>
+          </div>
+          <p class="panel-note">Content was barely reaching the target audience.</p>
+        </section>
+
+        <section class="panel panel--wide">
+          <h3 class="panel-label">Strategy</h3>
+          <p>I proposed and launched a new Q4 social media strategy with:</p>
+          <ul class="skills strategy-chips">
+            <li>SMART goals</li><li>KPIs</li><li>Audience personas</li><li>Competitor research</li><li>Content themes</li>
+          </ul>
+          <ol class="step-grid">
+            <li class="step">
+              <h4>Follower growth</h4>
+              <p>I built audience personas covering demographics, behaviors, preferences, and pain points, and researched which platforms each customer segment and location uses.</p>
+            </li>
+            <li class="step">
+              <h4>Views and engagement</h4>
+              <p>I developed content pillars based on persona insights and industry trends, replicated past top-performing formats, and analyzed performance patterns to identify the best days and times to post each content type.</p>
+            </li>
+            <li class="step">
+              <h4>Automated social media dashboard</h4>
+              <p>An AI-assisted metrics and content planner with automated routines that pull content from an app daily and refresh trending hashtags weekly. It also evaluates metrics and gives insights and recommendations.</p>
+            </li>
+          </ol>
+        </section>
+
+        <section class="panel panel--wide">
+          <h3 class="panel-label">Results</h3>
+          <p class="panel-lead">October became the strongest month in 90 days.</p>
+          <div class="kpi-grid kpi-grid--4">
+            <div class="kpi is-highlight">
+              <span class="kpi-label">Total views</span>
+              <strong class="kpi-value">118,025</strong>
+              <span class="delta good"><span aria-hidden="true">▲</span> Up 259.8% vs Sept</span>
+            </div>
+            <div class="kpi is-highlight">
+              <span class="kpi-label">Viewers (reach)</span>
+              <strong class="kpi-value">74,801</strong>
+              <span class="delta good"><span aria-hidden="true">▲</span> Up 498.5% vs Sept</span>
+            </div>
+            <div class="kpi is-highlight">
+              <span class="kpi-label">Interactions</span>
+              <strong class="kpi-value">1,360</strong>
+              <span class="delta good"><span aria-hidden="true">▲</span> Up 169.8% vs Sept</span>
+            </div>
+            <div class="kpi">
+              <span class="kpi-label">Visitor to follower</span>
+              <strong class="kpi-value">8.61%</strong>
+              <span class="delta good"><span aria-hidden="true">▲</span> Up 3.21 pts vs Sept</span>
+            </div>
+          </div>
+
+          <figure class="bar-chart">
+            <figcaption class="chart-title">Growth vs September</figcaption>
+            <ul>
+              <li style="--v: 100%"><span class="bar-label">Reach</span><span class="bar-track"><span class="bar"></span></span><span class="bar-value">+498.5%</span></li>
+              <li style="--v: 52.1%"><span class="bar-label">Views</span><span class="bar-track"><span class="bar"></span></span><span class="bar-value">+259.8%</span></li>
+              <li style="--v: 34.1%"><span class="bar-label">Interactions</span><span class="bar-track"><span class="bar"></span></span><span class="bar-value">+169.8%</span></li>            </ul>
+          </figure>
+        </section>
+
+        <section class="panel panel--wide">
+          <h3 class="panel-label">Recommendations</h3>
+          <ul class="rec-grid">
+            <li class="rec">Test new hook formats to reduce skip rates</li>
+            <li class="rec">Create more value-led content that prompts conversation and lifts engagement</li>
+          </ul>
+        </section>
+
+        <section class="panel panel--wide">
+          <h3 class="panel-label">The dashboard</h3>
+          <figure class="asset">
+            <img src="Assets/Sample%20Dashboard/Sample%20Dashboard.png" loading="lazy" width="1920" height="1080"
+                 alt="The automated social media dashboard on a laptop, showing current month performance and a current vs last month comparison" />
+          </figure>
+        </section>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- ---------- Case 02: Meta Ad Campaigns ---------- -->
+  <dialog class="modal modal--case" id="case-meta" aria-labelledby="case-meta-title" style="--folder: #fbc244; --folder-ink: #000">
+    <div class="modal-header">
+      <div>
+        <p class="case-kicker">Project 02 · Meta Ads</p>
+        <h2 id="case-meta-title">Meta Ad Campaigns</h2>
+      </div>
+      <button type="button" class="icon-btn" data-close-modal aria-label="Close case study">✕</button>
+    </div>
+    <div class="modal-scroll">
+      <div class="dash">
+        <section class="panel">
+          <h3 class="panel-label">Objective</h3>
+          <ul class="goal-list">
+            <li>Attract qualified tradespeople through a paid Meta Ads campaign.</li>
+          </ul>
+        </section>
+
+        <section class="panel">
+          <h3 class="panel-label">Challenge</h3>
+          <div class="kpi-grid">
+            <div class="kpi kpi--before">
+              <span class="kpi-label">Cost per lead, week 1</span>
+              <strong class="kpi-value">$71.41</strong>
+              <span class="delta bad">Well above the $20 target</span>
+            </div>
+            <div class="kpi kpi--before">
+              <span class="kpi-label">Leads, week 1</span>
+              <strong class="kpi-value">2</strong>
+              <span class="kpi-note">Very few leads</span>
+            </div>
+          </div>
+          <div class="meter" style="--v: 89.3%; --t: 25%">
+            <div class="meter-track" role="img" aria-label="Cost per lead of $71.41 against a $20 target, on a scale of $0 to $80">
+              <span class="meter-fill"></span>
+              <span class="meter-target"></span>
+            </div>
+            <div class="meter-scale" aria-hidden="true"><span>$0</span><span class="meter-t">Target $20</span><span>$80</span></div>
+          </div>
+        </section>
+
+        <section class="panel panel--wide">
+          <h3 class="panel-label">Strategy</h3>
+          <ol class="step-grid">
+            <li class="step">
+              <h4>Simplified the conversion path</h4>
+              <p>I switched the conversion location from website plus Instant Forms to Instant Forms only, after finding the application form hard to reach once visitors arrived on the landing page.</p>
+            </li>
+            <li class="step">
+              <h4>Refined targeting</h4>
+              <p>I broadened the audience size while defining more detailed targeting.</p>
+            </li>
+            <li class="step">
+              <h4>Doubled down on what worked</h4>
+              <p>I revised the creatives and replicated the best performers from week one. Reels led on click-through rate and lead volume.</p>
+            </li>
+            <li class="step">
+              <h4>Added an incentive</h4>
+              <p>I included an information package to encourage applications.</p>
+            </li>
+          </ol>
+        </section>
+
+        <section class="panel panel--wide">
+          <h3 class="panel-label">Results</h3>
+          <p class="panel-lead">After the relaunch, cost per lead dropped 82% and click-through rate rose.</p>
+          <div class="results-split">
+            <div class="kpi-stack">
+              <div class="kpi is-highlight kpi--hero">
+                <span class="kpi-label">Cost per lead</span>
+                <span class="kpi-compare"><span class="from">$71.41</span><span aria-hidden="true">→</span><strong class="kpi-value">$12.57</strong></span>
+                <span class="delta good"><span aria-hidden="true">▼</span> Down 82% · within the $20 target</span>
+              </div>
+              <div class="kpi is-highlight kpi--hero">
+                <span class="kpi-label">Click-through rate (all)</span>
+                <span class="kpi-compare"><span class="from">1.82%</span><span aria-hidden="true">→</span><strong class="kpi-value">2.36%</strong></span>
+                <span class="delta good"><span aria-hidden="true">▲</span> Up 0.54 pts</span>
+              </div>
+              <div class="kpi-grid">
+                <div class="kpi">
+                  <span class="kpi-label">Leads</span>
+                  <span class="kpi-compare"><span class="from">2</span><span aria-hidden="true">→</span><strong class="kpi-value">9</strong></span>
+                  <span class="kpi-note">Meta Instant Form</span>
+                </div>
+                <div class="kpi">
+                  <span class="kpi-label">Spend</span>
+                  <span class="kpi-compare"><span class="from">$142.82</span><span aria-hidden="true">→</span><strong class="kpi-value">$113.17</strong></span>
+                  <span class="kpi-note">−20.8% · 6 active ads (was 5)</span>
+                </div>
+              </div>
+            </div>
+
+            <figure class="col-chart">
+              <figcaption class="chart-title">Cost per lead vs $20 target</figcaption>
+              <div class="col-area">
+                <div class="col" style="--v: 100%"><span class="col-value">$71.41</span><span class="col-bar"></span></div>
+                <div class="col is-after" style="--v: 17.6%"><span class="col-value">$12.57</span><span class="col-bar"></span></div>
+                <div class="col-target" style="--t: 28%"><span>Target $20</span></div>
+              </div>
+              <div class="col-labels" aria-hidden="true"><span>Week 1</span><span>After relaunch</span><span></span></div>
+            </figure>
+          </div>
+        </section>
+
+        <section class="panel panel--wide">
+          <h3 class="panel-label">Recommendations</h3>
+          <ul class="rec-grid">
+            <li class="rec"><span><strong>Create a dedicated careers page</strong> where candidates can browse open roles.</span></li>
+            <li class="rec"><span><strong>Improve the page layout</strong> so forms load quickly and are easy to find as soon as visitors land.</span></li>
+          </ul>
+        </section>
+
+        <section class="panel panel--wide">
+          <h3 class="panel-label">Sample decks</h3>
+          <div class="deck-grid">
+            <article class="deck">
+              <h4>Recruitment Campaign</h4>
+              <p>The original proposal, showing my planning process before launch.</p>
+              <a class="btn btn-primary btn-sm" href="Assets/Sample%20Decks/PORTFOLIO%20TRADE.pdf" target="_blank" rel="noopener"
+                 data-pdf data-pdf-view-only data-pdf-title="Recruitment Campaign deck">View deck</a>
+            </article>
+            <article class="deck">
+              <h4>Partnership Campaign <span class="badge">Ongoing</span></h4>
+              <p>A B2B lead generation campaign targeting partner agencies. Results are not yet available; this deck shows my strategy and process.</p>
+              <a class="btn btn-primary btn-sm" href="Assets/Sample%20Decks/PORTFOLIO%20PARTNER.pdf" target="_blank" rel="noopener"
+                 data-pdf data-pdf-view-only data-pdf-title="Partnership Campaign deck">View deck</a>
+            </article>
+          </div>
+        </section>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- ---------- Case 03: One-Week Giveaway Campaign ---------- -->
+  <dialog class="modal modal--case" id="case-giveaway" aria-labelledby="case-giveaway-title" style="--folder: #000; --folder-ink: #fbc244">
+    <div class="modal-header">
+      <div>
+        <p class="case-kicker">Project 03 · Campaign</p>
+        <h2 id="case-giveaway-title">One-Week Giveaway Campaign, Built in a Day</h2>
+      </div>
+      <button type="button" class="icon-btn" data-close-modal aria-label="Close case study">✕</button>
+    </div>
+    <div class="modal-scroll">
+      <div class="dash">
+        <section class="panel">
+          <h3 class="panel-label">Objective</h3>
+          <ul class="goal-list">
+            <li>Boost orders from partners in the final week of the month with a week-long giveaway campaign.</li>
+          </ul>
+        </section>
+
+        <section class="panel">
+          <h3 class="panel-label">Challenge</h3>
+          <div class="kpi-grid">
+            <div class="kpi kpi--before">
+              <span class="kpi-label">Deadline</span>
+              <strong class="kpi-value">Same day</strong>
+            </div>
+            <div class="kpi kpi--before">
+              <span class="kpi-label">Campaign run</span>
+              <strong class="kpi-value">1 week</strong>
+            </div>
+          </div>
+          <p class="panel-note">Everything had to be ready to run for the rest of the week:</p>
+          <ul class="check-list">
+            <li>Social media post</li>
+            <li>Email campaign</li>
+            <li>Lead intake flow</li>
+          </ul>
+        </section>
+
+        <section class="panel panel--wide">
+          <h3 class="panel-label">Strategy</h3>
+          <ol class="step-grid">
+            <li class="step">
+              <h4>Content across channels</h4>
+              <p>Designed the giveaway post, daily Instagram stories, and a Mailchimp email campaign directing partners to claim through the post.</p>
+            </li>
+            <li class="step">
+              <h4>Lead intake flow</h4>
+              <p>Built a lead intake flow so every claim was matched to a work order number.</p>
+            </li>
+            <li class="step">
+              <h4>Boost and engage</h4>
+              <p>Boosted the post to the property manager audience and replied to comments and DMs within the hour throughout the week.</p>
+            </li>
+          </ol>
+        </section>
+
+        <section class="panel panel--wide">
+          <h3 class="panel-label">Results</h3>
+          <div class="results-split results-split--even">
+            <div class="kpi is-highlight kpi--hero">
+              <span class="kpi-label">Partner responses</span>
+              <strong class="kpi-value kpi-value--xl">43</strong>
+              <span class="kpi-note">Each quoting a work order number</span>
+            </div>
+            <ul class="outcome-list">
+              <li><span>The campaign ran during the month's strongest week for work orders.</span></li>
+              <li><span>Leadership adopted the giveaway as a monthly campaign.</span></li>
+              <li><span>I developed a repeatable playbook for future launches.</span></li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="panel panel--wide">
+          <h3 class="panel-label">Creative Samples</h3>
+          <div class="asset-grid">
+            <figure class="asset">
+              <img src="Assets/Tumbler%20Campaign/Sample%201.png" loading="lazy" width="1080" height="1350"
+                   alt="Giveaway post: Grab a Tumbler. Send us a work order and get a free tumbler. Shows green, black and red tumblers." />
+              <figcaption>Giveaway post</figcaption>
+            </figure>
+            <figure class="asset">
+              <img src="Assets/Tumbler%20Campaign/Sample%20GIF.gif" loading="lazy" width="1080" height="1350"
+                   alt="Animated Instagram story for the tumbler giveaway" />
+              <figcaption>Daily Instagram stories</figcaption>
+            </figure>
+            <figure class="asset">
+              <img src="Assets/Tumbler%20Campaign/Sample%20Email.png" loading="lazy" width="1080" height="1350"
+                   alt="Mailchimp email on a phone: Grab your Tumbler, with steps to claim, a Claim your Tumbler button, and the colour choices" />
+              <figcaption>Mailchimp email campaign</figcaption>
+            </figure>
+          </div>
+        </section>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- =========================================================
+       PDF VIEWER (résumé and decks). Any link with data-pdf opens here.
+       ========================================================= -->
+  <dialog class="modal modal--pdf" id="pdf-modal" aria-labelledby="pdf-title">
+    <div class="modal-header">
+      <h2 id="pdf-title">Document</h2>
+      <div class="modal-actions">
+        <a class="btn btn-ghost btn-sm pdf-open" href="#" target="_blank" rel="noopener">Open in new tab ↗</a>
+        <a class="btn btn-primary btn-sm pdf-download" href="#" download>Download PDF ↓</a>
+        <button type="button" class="icon-btn" data-close-modal aria-label="Close viewer">✕</button>
+      </div>
+    </div>
+    <div class="pdf-body">
+      <iframe class="pdf-frame" title="PDF preview"></iframe>
+      <div class="pdf-fallback" hidden>
+        <p>This device can't preview PDFs inside the page.<br />Open it or download it instead.</p>
+        <a class="btn btn-primary pdf-open" href="#" target="_blank" rel="noopener">Open PDF ↗</a>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
